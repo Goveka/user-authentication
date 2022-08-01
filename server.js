@@ -95,4 +95,6 @@ res.header("auth-token", token).send(token);
 
 
 })
-app.listen(port,()=> console.log("server is up and running on server 3007") )
+app.listen(port,()=> 
+{console.log("server is up and running on server 3007")}
+ )
