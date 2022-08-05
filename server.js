@@ -18,7 +18,7 @@ console.log("connected to db!");
 //middleware
 app.use(express.static("public"));
 app.use(express.json());
-app.use(require('body-parser')());
+//app.use(require('body-parser')());
 
 app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/form.html')
