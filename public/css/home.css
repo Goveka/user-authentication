@@ -1,199 +1,183 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Updated font */
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #222; /* Dark background */
-    color: #fff; /* Consistent white text */
-  }
-  
-  main {
-    flex: 1;
-    padding: 20px;
-    background-color: #333; /* Slightly darker main area */
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Updated font */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #222; /* Dark background */
+  color: #fff; /* Consistent white text */
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  background-color: #333; /* Slightly darker main area */
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header img {
+  border-radius: 15%;
+  width: 8%;
+  padding: 10px;
+}
+
+header h1 {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+header h4 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #00eeff; /* Vibrant blue links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#searchInput {
+  background-color: #00eeff20; /* Transparent blue input area */
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#searchBtn {
+  background-color: #00eeff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+#searchBtn:hover {
+  background-color: #0056b3;
+}
+
+#description {
+  margin-bottom: 20px;
+}
+
+#description h3 {
+  font-size: 20px;
+}
+
+#description h5 {
+  font-size: 14px;
+}
+
+#blogPosts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.blogPost {
+  border: 1px solid #222; /* Darker border for blog posts */
+  padding: 20px;
+  text-align: center;
+}
+
+.blogPost img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px; /* Subtle rounded corners */
+}
+
+.blogPost h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Other elements (buttons, footer, etc.) can be styled similarly to match the theme */
+
+@media (max-width: 575px) {
+
   header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
   }
-  
+
   header img {
-    border-radius: 15%;
-    width: 8%;
-    padding: 10px;
+    width: 50%;
+    margin-bottom: 10px;
   }
-  
+
   header h1 {
-    font-size: 30px;
-    margin-top: 10px;
+    font-size: 25px;
   }
-  
+
   header h4 {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  a {
-    color: #00eeff; /* Vibrant blue links */
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  #searchInput {
-    background-color: #00eeff20; /* Transparent blue input area */
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 10px;
-  }
-  
-  #searchBtn {
-    background-color: #00eeff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-  }
-  
-  #searchBtn:hover {
-    background-color: #0056b3;
-  }
-  
-  #description {
-    margin-bottom: 20px;
-  }
-  
-  #description h3 {
-    font-size: 20px;
-  }
-  
-  #description h5 {
     font-size: 14px;
   }
-  
-  #blogPosts {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+
+  main {
+    padding: 10px;
   }
-  
-  .blogPost {
-    border: 1px solid #222; /* Darker border for blog pos */
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .blogPost img {
+
+  #searchInput {
     width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    border-radius: 5px; /* Subtle rounded corners */
   }
-  
+
+  #blogPosts {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  .blogPost {
+    padding: 15px;
+  }
+}
+@media (min-width: 1024px) {
+
+  main {
+    padding: 50px;
+  }
+
+  #blogPosts {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+  }
+
   .blogPost h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 22px;
   }
 
   footer {
-    background-color: #000000c7;
-    padding: 10px;
-    color: #fff;
-    font-weight: bolder;
-    text-align: center;
+    padding: 20px;
   }
-  
-  footer a {
-    color: #6b75ffd8;
-  }
-  
-  footer a:hover {
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 575px) {
+}
+@media (min-width: 1440px) {
 
-    header {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    header img {
-      width: 50%;
-      margin-bottom: 10px;
-    }
-  
-    header h1 {
-      font-size: 25px;
-    }
-  
-    header h4 {
-      font-size: 14px;
-    }
-  
-    main {
-      padding: 10px;
-    }
-  
-    #searchInput {
-      width: 100%;
-    }
-  
-    #blogPosts {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 10px;
-    }
-  
-    .blogPost {
-      padding: 15px;
-    }
+  #blogPosts {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
   }
-  
-  @media (min-width: 1024px) {
 
-    main {
-      padding: 50px;
-    }
-  
-    #blogPosts {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 25px;
-    }
-  
-    .blogPost h2 {
-      font-size: 22px;
-    }
-  
-    footer {
-      padding: 20px;
-    }
+  .blogPost {
+    padding: 20px;
   }
-  @media (min-width: 1440px) {
 
-    #blogPosts {
-      grid-template-columns: repeat(5, 1fr);
-      gap: 30px;
-    }
-  
-    .blogPost {
-      padding: 20px;
-    }
-  
-    footer {
-      font-size: 14px;
-    }
+  footer {
+    font-size: 14px;
   }
-    
+}

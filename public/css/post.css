@@ -10,7 +10,7 @@ body{
     flex-direction: column;
     min-height: 100vh;
     background-color: #222; /* Dark background */
-    color: #fff;
+    color: #fff; /* Consistent white text */
 }
 
 
